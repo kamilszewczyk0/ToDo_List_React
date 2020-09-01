@@ -1,6 +1,8 @@
 import React from "react";
 import Form from "./Form";
 import Tasks from "./Tasks";
+import Buttons from "./Buttons";
+import Section from "./Section";
 
 const tasks = [
   {id: 1, content: "przejść na Reacta", done: false},
@@ -13,18 +15,15 @@ function App() {
   return (
     <div>
       <main className="container">
-        <section className="section">
-          <h1 className="section__header--main">ToDo List</h1>
-          <label className="section__label">Add new task</label>
-          <Form />
-        </section>
-        <section className="section">
-          <section className="section__header">
-            <h2 className="section__title">Task List</h2>
-            <div className="buttons"></div>
-          </section>
-          <Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />
-        </section>
+        <h1 className="section__header--main">ToDo List</h1>
+        <Section title="Add new task" body={<Form />} />
+        <Section
+          title="Task List"
+          extraHeaderContent={
+            <Buttons tasks={tasks} hideDoneTasks={hideDoneTasks} />
+          }
+          body={<Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />}
+        />
       </main>
     </div>
   );
