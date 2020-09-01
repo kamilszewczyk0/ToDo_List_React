@@ -1,4 +1,12 @@
 import React from "react";
+import Form from "./Form";
+
+const tasks = [
+  {id: 1, content: "przejść na Reacta", done: false},
+  {id: 2, content: "zjeść obiad", done: true},
+];
+
+const hideDoneTasks = false;
 
 function App() {
   return (
@@ -7,20 +15,14 @@ function App() {
         <section className="section">
           <h1 className="section__header--main">ToDo List</h1>
           <label className="section__label">Add new task</label>
-          <form className="section__form js-form">
-            <input
-              className="section__input js-newTask"
-              placeholder="What needs to be done?"
-            />
-            <button className="section__btn js-addNewTaskBtn">Add task</button>
-          </form>
+          <Form />
         </section>
         <section className="section">
           <section className="section__header">
             <h2 className="section__title">Task List</h2>
-            <div className="buttons js-buttons"></div>
+            <div className="buttons"></div>
           </section>
-          <ul className="section__list js-tasks"></ul>
+          <ul className="section__list"></ul>
         </section>
       </main>
     </div>
