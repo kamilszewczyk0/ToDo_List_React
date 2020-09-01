@@ -1,6 +1,6 @@
 # ToDo List
 
-[ToDo List in React](https://kamilszewczyk0.github.io/ToDo_List_React/)
+[Live demo](https://kamilszewczyk0.github.io/ToDo_List_React/)
 
 My first project in React, develeped with YouCode Web Development from Basics Course.
 I have learned the basiscs of creating components, and connecting them to get the project running. Further steps of developing the project will be described in following lines, or You can find them in commit's history.
