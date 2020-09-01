@@ -1,5 +1,6 @@
 import React from "react";
 import Form from "./Form";
+import Tasks from "./Tasks";
 
 const tasks = [
   {id: 1, content: "przejść na Reacta", done: false},
@@ -22,7 +23,7 @@ function App() {
             <h2 className="section__title">Task List</h2>
             <div className="buttons"></div>
           </section>
-          <ul className="section__list"></ul>
+          <Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />
         </section>
       </main>
     </div>

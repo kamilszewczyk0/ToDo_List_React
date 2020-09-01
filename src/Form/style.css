@@ -1,0 +1,45 @@
+.section__form {
+  display: flex;
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 2px;
+}
+
+@media (max-width: 767px) {
+  .section__form {
+    flex-wrap: wrap;
+  }
+}
+
+.section__input {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.section__btn {
+  margin-left: 30px;
+  padding: 0 20px;
+  color: #ffffff;
+  background-color: teal;
+  border: none;
+}
+
+.section__btn:hover {
+  transform: scale(1.04);
+  background-color: hsl(180, 100%, 30%);
+  transition: 0.15s;
+  cursor: pointer;
+}
+
+.section__btn:active {
+  background-color: hsla(188, 100%, 26%, 0.534);
+  transition: background-color 0.05s;
+}
+
+@media (max-width: 767px) {
+  .section__btn {
+    flex-basis: 100%;
+    margin: 20px 0;
+    padding: 15px;
+  }
+}

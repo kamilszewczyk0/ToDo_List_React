@@ -1,0 +1,55 @@
+.section__list {
+  list-style: none;
+  padding: 30px 25px;
+}
+
+.task__item {
+  margin: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.tasks__item--hidden {
+  display: none;
+}
+
+.list__doneBtn,
+.list__removeBtn {
+  height: 30px;
+  width: 30px;
+  border: none;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.list__doneBtn {
+  background-color: #197a1e;
+}
+
+.list__doneBtn:hover {
+  background-color: hsl(123, 66%, 39%);
+  transition: 0.15s;
+}
+
+.list__task {
+  margin: 0;
+  flex-basis: 100%;
+  padding: 0 15px;
+  overflow-wrap: break-word;
+}
+
+.list__task--done {
+  text-decoration: line-through;
+}
+
+.list__removeBtn {
+  background-color: #ec2539;
+}
+
+.list__removeBtn:hover {
+  background-color: hsl(354, 84%, 64%);
+  transition: 0.15s;
+}
