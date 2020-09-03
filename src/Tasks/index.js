@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-const Tasks = ({tasks, hideDone, removeTask}) => (
+const Tasks = ({tasks, hideDone, removeTask, toggleTaskDone}) => (
   <ul className="section__list">
     {tasks.map((task) => (
       <li
@@ -9,7 +9,11 @@ const Tasks = ({tasks, hideDone, removeTask}) => (
         className={`task__item${
           task.done && hideDone ? " tasks__item--hidden" : ""
         }`}>
-        <button className="list__doneBtn ">{task.done ? "✔" : ""}</button>
+        <button
+          onClick={() => toggleTaskDone(task.id)}
+          className="list__doneBtn ">
+          {task.done ? "✔" : ""}
+        </button>
         <p className={`list__task${task.done ? " list__task--done" : ""}`}>
           {task.content}
         </p>
