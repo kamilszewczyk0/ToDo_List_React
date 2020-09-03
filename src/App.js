@@ -11,23 +11,19 @@ const tasks = [
   {id: 2, content: "zjeść obiad", done: true},
 ];
 
-const hideDoneTasks = false;
+const hideDone = false;
 
 function App() {
   return (
-    <div>
-      <Container>
-        <Header title="ToDo List" />
-        <Section title="Add new task" body={<Form />} />
-        <Section
-          title="Task List"
-          extraHeaderContent={
-            <Buttons tasks={tasks} hideDoneTasks={hideDoneTasks} />
-          }
-          body={<Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />}
-        />
-      </Container>
-    </div>
+    <Container>
+      <Header title="ToDo List" />
+      <Section title="Add new task" body={<Form />} />
+      <Section
+        title="Task List"
+        extraHeaderContent={<Buttons tasks={tasks} hideDone={hideDone} />}
+        body={<Tasks tasks={tasks} hideDone={hideDone} />}
+      />
+    </Container>
   );
 }
 
