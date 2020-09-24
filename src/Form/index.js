@@ -4,6 +4,12 @@ import "./style.css";
 const Form = ({addNewTask}) => {
   const [newTaskContent, setNewTaskContent] = useState("");
 
+  const inputRef = useRef(null);
+
+  const inputFocus = () => {
+    inputRef.current.focus();
+  };
+
   const onFormSubmit = (event) => {
     event.preventDefault();
     if (newTaskContent.trim() === "") {
@@ -11,12 +17,7 @@ const Form = ({addNewTask}) => {
     }
     addNewTask(newTaskContent.trim());
     setNewTaskContent("");
-  };
-
-  const inputRef = useRef(null);
-
-  const inputFocus = () => {
-    inputRef.current.focus();
+    inputFocus();
   };
 
   return (
@@ -28,9 +29,7 @@ const Form = ({addNewTask}) => {
         onChange={({target}) => setNewTaskContent(target.value)}
         ref={inputRef}
       />
-      <button onClick={inputFocus} className="section__btn">
-        Add task
-      </button>
+      <button className="section__btn">Add task</button>
     </form>
   );
 };
