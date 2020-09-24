@@ -1,6 +1,6 @@
 import React from "react";
-import "./style.css";
+import {Main} from "./styled";
 
-const Container = ({children}) => <main className="container">{children}</main>;
+const Container = ({children}) => <Main>{children}</Main>;
 
 export default Container;
