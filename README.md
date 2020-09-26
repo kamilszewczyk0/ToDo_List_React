@@ -5,7 +5,9 @@
 My first project in React, develeped with YouCode Web Development from Basics Course.
 I have learned the basiscs of creating components, and connecting them to get the project running. Further steps of developing the project will be described in following lines, or You can find them in commit's history.
 
-After presenting useState hook I was able to add full functionality to the app.
+After presenting useState hook I was able to add full functionality to the app. There is also use of hooks like useEffect and useRef, as well as Custom Hooks.
+
+Entire styling in the app is created by Styled Components.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
